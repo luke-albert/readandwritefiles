@@ -17,3 +17,6 @@ for row in reader:
     i += 1
 
     print(format(first_name, "<14"), format(last_name, "<16"), format(country, "<14"))
+
+
+infile.close()
