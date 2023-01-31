@@ -12,7 +12,8 @@ writer = csv.writer(outfile, delimiter=" ")
 header = ["Customer", "|" "Total"]
 writer.writerow(header)
 
-cust_id = 0
+
+cust_id = 250
 subtotal = 0
 tax = 0
 freight = 0
@@ -23,11 +24,10 @@ for row in reader:
         subtotal += float(row[3])
         tax += float(row[4])
         freight += float(row[5])
-        total = subtotal + tax + freight
     else:
         total = subtotal + tax + freight
-        cust_num = int(row[0])
-        newinfo = [[cust_num, total]]
+        custnum = int(row[0])
+        newinfo = [[custnum, total]]
         writer.writerows(newinfo)
         cust_id = int(row[0])
         subtotal = float(row[3])
