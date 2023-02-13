@@ -24,3 +24,5 @@ for row in reader:
         format(salary, "<10"),
         format(bonus, "<10"),
     )
+
+# basically just reading and organizing data from "EmployeePay.csv"
