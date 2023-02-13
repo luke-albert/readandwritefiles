@@ -10,7 +10,9 @@ next(reader)
 writer = csv.writer(outfile)
 
 header = ["Customer Name", "Country"]
-writer.writerow(header)
+writer.writerow(
+    header
+)  # writes to writer (just the header tho) which is "customer_country.csv"
 i = 0
 
 
