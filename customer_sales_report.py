@@ -13,7 +13,7 @@ outfile.write("Customer  |  Total\n")
 
 for row in infile:
     if cust_id != row[0]:
-        outfile.write("\t" + cust_id + "\t" + str(customer_total) + "\n")
+        outfile.write(cust_id + "\t" + str(customer_total) + "\n")
 
         cust_id = row[0]
         customer_total = 0
@@ -21,7 +21,7 @@ for row in infile:
     total = float(row[3]) + float(row[4]) + float(row[5])
     customer_total += total
 
-outfile.write("\t" + cust_id + "\t" + str(customer_total + "\n"))
+outfile.write(cust_id + "\t" + str(customer_total + "\n"))
 
 
 outfile.close()
